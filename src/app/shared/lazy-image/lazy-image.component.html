@@ -1,0 +1,11 @@
+<div class="d-flex justify-content-center align-items-center container">
+  <img
+    [src]="hasLoaded ? url : 'assets/loader.svg'"
+    [alt]="alt"
+    [ngClass]="[
+      className,
+      hasLoaded ? 'animate__animated animate__fadeIn' : ''
+    ]"
+    (load)="onLoad()"
+  />
+</div>

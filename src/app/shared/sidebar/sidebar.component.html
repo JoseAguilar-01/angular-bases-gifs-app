@@ -1,0 +1,33 @@
+<aside class="bg-dark border-right p-3 sidebar">
+  <h3 class="text-light">Gifs App</h3>
+
+  <hr class="text-white" />
+
+  <div class="list-group list-reset">
+    <div
+      class="d-flex list-group-item p-0 border-top-0 border-start-0 border-end-0 border-bottom-1 border-black"
+      *ngFor="let tag of tagsHistory; let isFirst = first; let isLast = last"
+    >
+      <button
+        [ngClass]="{
+          'btn button-search w-100 text-start rounded-end-0': true,
+          'rounded-bottom-0': isFirst,
+          'rounded-top-left-0 rounded-start-1': isLast,
+          'rounded-0': !isFirst && !isFirst,
+        }"
+        (click)="searchTag(tag)"
+      >
+        {{ tag | titlecase }}
+      </button>
+      <button
+        [ngClass]="{'btn button-delete rounded-start-0': true,
+        'rounded-bottom-0': isFirst,
+        'rounded-top-right-0 rounded-end-1': isLast,
+        'rounded-0': !isFirst && !isFirst,}"
+        (click)="deleteTag(tag)"
+      >
+        X
+      </button>
+    </div>
+  </div>
+</aside>

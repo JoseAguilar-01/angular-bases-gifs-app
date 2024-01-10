@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+}
+
+.card__container-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__container-image img {
+  object-fit: contain;
+}

@@ -1,0 +1,19 @@
+:host {
+  display: block;
+}
+
+.animate__animated.animate__fadeIn {
+  --animate-duration: 1.5s;
+}
+
+.container {
+  height: 110px;
+
+  @media (min-width: 768px) {
+    height: 220px;
+  }
+}
+
+.container img {
+  object-fit: contain;
+}

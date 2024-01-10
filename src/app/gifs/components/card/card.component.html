@@ -1,0 +1,14 @@
+<div *ngIf="gif?.id" class="card mb-2 text-center bg-dark container p-2">
+  <div class="card__container-image">
+    <shared-lazy-image
+      [url]="gif.images.downsized_medium.url"
+      [alt]="gif.title || 'No name'"
+      [className]="'w-100 h-100'"
+    ></shared-lazy-image>
+  </div>
+  <div class="card-body text-white">
+    <p class="text-center m-0">
+      {{ gif.title.trim() || "Título no disponible" }}
+    </p>
+  </div>
+</div>
